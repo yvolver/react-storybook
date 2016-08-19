@@ -7,7 +7,7 @@ import fs from 'fs';
 import storybook from './middleware';
 import packageJson from '../../package.json';
 import { parseList } from './utils';
-import { track, dontTrack } from './track_usage';
+// import { track, dontTrack } from './track_usage';
 
 const logger = console;
 
@@ -23,14 +23,16 @@ program
 
 
 if (program.dontTrack) {
-  dontTrack();
-  logger.info('Storybook would not send anonymous usage stats anymore.');
+  // We definitely don't want to send usage data
+  // dontTrack();
+  logger.info('Storybook will not send anonymous usage stats anymore.');
   process.exit(0);
 }
 
 if (program.doTrack) {
-  dontTrack(false);
-  logger.info('Storybook would send anonymous usage to getstorybooks.io.');
+  // We definitely don't want to send usage data
+  // dontTrack(false);
+  logger.info('Storybook will send anonymous usage to getstorybooks.io.');
   process.exit(0);
 }
 
@@ -72,6 +74,7 @@ app.listen(...listenAddr, function (error) {
   } else {
     const address = `http://${program.host || 'localhost'}:${program.port}/`;
     logger.info(`\nReact Storybook started on => ${address}\n`);
-    track();
+    logger.info(`\nTracking is disabled.\n`);
+    // track();
   }
 });
