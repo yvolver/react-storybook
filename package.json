@@ -26,7 +26,7 @@
     "@kadira/storybook-addon-links": "^1.0.0",
     "@kadira/storybook-addons": "^1.3.1",
     "@kadira/storybook-channel-pagebus": "^2.0.2",
-    "@kadira/storybook-ui": "https://github.com/yvolver/storybook-ui.git#297c0df651008212e1b0ecf9447de8ba99492055",
+    "@kadira/storybook-ui": "https://github.com/yvolver/storybook-ui.git#083e1936e964c1e791b75d80167f6e3314d5055e",
     "airbnb-js-shims": "^1.0.0",
     "autoprefixer": "^6.3.7",
     "babel-core": "^6.11.4",
